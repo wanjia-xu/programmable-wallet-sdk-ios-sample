@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B3BDF9D72A162860006E2D76 /* EndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3BDF9D62A162860006E2D76 /* EndPoint.swift */; };
+		B3BDF9D92A1631BC006E2D76 /* Toast.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3BDF9D82A1631BC006E2D76 /* Toast.swift */; };
+		B3BDF9DB2A1631EF006E2D76 /* Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3BDF9DA2A1631EF006E2D76 /* Utility.swift */; };
 		B3E8DF632A15F63D0040371F /* programmable_wallet_sdk_ios_sampleApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3E8DF622A15F63D0040371F /* programmable_wallet_sdk_ios_sampleApp.swift */; };
 		B3E8DF652A15F63D0040371F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3E8DF642A15F63D0040371F /* ContentView.swift */; };
 		B3E8DF672A15F63F0040371F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B3E8DF662A15F63F0040371F /* Assets.xcassets */; };
@@ -15,6 +18,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B3BDF9D62A162860006E2D76 /* EndPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndPoint.swift; sourceTree = "<group>"; };
+		B3BDF9D82A1631BC006E2D76 /* Toast.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Toast.swift; sourceTree = "<group>"; };
+		B3BDF9DA2A1631EF006E2D76 /* Utility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utility.swift; sourceTree = "<group>"; };
 		B3E8DF5F2A15F63D0040371F /* programmable-wallet-sdk-ios-sample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "programmable-wallet-sdk-ios-sample.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B3E8DF622A15F63D0040371F /* programmable_wallet_sdk_ios_sampleApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = programmable_wallet_sdk_ios_sampleApp.swift; sourceTree = "<group>"; };
 		B3E8DF642A15F63D0040371F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -51,8 +57,17 @@
 				B439E52E3B22DC083AD67A6A /* Pods-programmable-wallet-sdk-ios-sample.debug.xcconfig */,
 				CDFEFF2A14EDA74EF8E4D786 /* Pods-programmable-wallet-sdk-ios-sample.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		B3BDF9DC2A16320E006E2D76 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				B3BDF9D62A162860006E2D76 /* EndPoint.swift */,
+				B3BDF9DA2A1631EF006E2D76 /* Utility.swift */,
+				B3BDF9D82A1631BC006E2D76 /* Toast.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 		B3E8DF562A15F63D0040371F = {
@@ -76,9 +91,10 @@
 		B3E8DF612A15F63D0040371F /* programmable-wallet-sdk-ios-sample */ = {
 			isa = PBXGroup;
 			children = (
+				B3E8DF662A15F63F0040371F /* Assets.xcassets */,
 				B3E8DF622A15F63D0040371F /* programmable_wallet_sdk_ios_sampleApp.swift */,
 				B3E8DF642A15F63D0040371F /* ContentView.swift */,
-				B3E8DF662A15F63F0040371F /* Assets.xcassets */,
+				B3BDF9DC2A16320E006E2D76 /* Helpers */,
 				B3E8DF682A15F63F0040371F /* Preview Content */,
 			);
 			path = "programmable-wallet-sdk-ios-sample";
@@ -224,8 +240,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B3BDF9DB2A1631EF006E2D76 /* Utility.swift in Sources */,
 				B3E8DF652A15F63D0040371F /* ContentView.swift in Sources */,
 				B3E8DF632A15F63D0040371F /* programmable_wallet_sdk_ios_sampleApp.swift in Sources */,
+				B3BDF9D92A1631BC006E2D76 /* Toast.swift in Sources */,
+				B3BDF9D72A162860006E2D76 /* EndPoint.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -366,7 +385,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.0.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.circle.programmable-wallet-sdk-ios-sample";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -395,7 +414,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.0.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.circle.programmable-wallet-sdk-ios-sample";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;

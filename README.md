@@ -1,6 +1,12 @@
 # programmable-wallet-sdk-ios-sample
 This is a sample project for iOS beginners to integrate with CircleProgrammableWalletSDK.
 
+- Category
+  - [Requirements](#requirements)
+  - [Installation](#installation)
+  - [Run the project](#run-the-project)
+---
+
 ## Requirements
 
 ### Xcode
@@ -12,6 +18,8 @@ This is a sample project for iOS beginners to integrate with CircleProgrammableW
 ### SSH key
 Shared [SSH key](https://share.1password.com/s#bzIRVj59HVFKzKj1LbZToCDh10DyPVlRKTmhFbVqmuo) for PW SDK Hackathon
 
+<img src="readme_images/screenshot_1.png" width="300"/>
+
 1. `$ vi ~/.ssh/{your SSH key name}`, then paste the private key
 2. Open your `~/.ssh/config` file, then modify the file to contain the following lines.
     ```default
@@ -22,14 +30,16 @@ Shared [SSH key](https://share.1password.com/s#bzIRVj59HVFKzKj1LbZToCDh10DyPVlRK
     ```
 3. `$ ssh-add --apple-use-keychain ~/.ssh/{your SSH key name}`
 
-  > How to setup an exist SSH key? : see [this](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent#adding-your-ssh-key-to-the-ssh-agent)
+> How to setup an exist SSH key? : see [this](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent#adding-your-ssh-key-to-the-ssh-agent)
 
 ## Installation
 
 1. Clone this repo
-2. Open project folder `$ cd programmable-wallet-sdk-ios-sample` 
+2. Open project folder `$ cd programmable-wallet-sdk-ios-sample`
 3. Run `$ pod install` to install `CircleProgrammableWalletSDK`
 4. Run `$ pod update` to update `CircleProgrammableWalletSDK` (Optional)
-5. Open `programmable-wallet-sdk-ios-sample.xcworkspace` in xcode
-6. Run the project
+5. Open the `programmable-wallet-sdk-ios-sample.xcworkspace` in xcode
+<img src="readme_images/screenshot_3.png" width="400"/>
+
+## Run the project
 

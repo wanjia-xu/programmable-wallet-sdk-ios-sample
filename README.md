@@ -1,7 +1,7 @@
 # programmable-wallet-sdk-ios-sample
 This is a sample project for iOS beginners to integrate with CircleProgrammableWalletSDK.
 
-- Category
+- Bookmark
   - [Requirements](#requirements)
   - [Installation](#installation)
   - [Run the project](#run-the-project)
@@ -18,7 +18,7 @@ This is a sample project for iOS beginners to integrate with CircleProgrammableW
 ### SSH key
 Shared [SSH key](https://share.1password.com/s#bzIRVj59HVFKzKj1LbZToCDh10DyPVlRKTmhFbVqmuo) for PW SDK Hackathon
 
-<img src="readme_images/screenshot_1.png" width="300"/>
+<img src="readme_images/screenshot_1.png" width="400"/>
 
 1. `$ vi ~/.ssh/{your SSH key name}`, then paste the private key
 2. Open your `~/.ssh/config` file, then modify the file to contain the following lines.
@@ -39,7 +39,10 @@ Shared [SSH key](https://share.1password.com/s#bzIRVj59HVFKzKj1LbZToCDh10DyPVlRK
 3. Run `$ pod install` to install `CircleProgrammableWalletSDK`
 4. Run `$ pod update` to update `CircleProgrammableWalletSDK` (Optional)
 5. Open the `programmable-wallet-sdk-ios-sample.xcworkspace` in xcode
-<img src="readme_images/screenshot_3.png" width="400"/>
+<img src="readme_images/screenshot_2.png" width="400"/>
 
 ## Run the project
 
+1. Select a simulator as run target
+2. press `Run` button (Command + R)
+![image](readme_images/screenshot_3.png)

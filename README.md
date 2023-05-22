@@ -38,7 +38,7 @@ Shared [SSH key](https://share.1password.com/s#bzIRVj59HVFKzKj1LbZToCDh10DyPVlRK
 2. Open project folder `$ cd programmable-wallet-sdk-ios-sample`
 3. Run `$ pod install` to install `CircleProgrammableWalletSDK`
 4. Run `$ pod update` to update `CircleProgrammableWalletSDK` (Optional)
-5. Open the `programmable-wallet-sdk-ios-sample.xcworkspace` in xcode
+5. Open the `programmable-wallet-sdk-ios-sample.xcworkspace` in Xcode
 <img src="readme_images/screenshot_2.png" width="400"/>
 
 ## Run the project

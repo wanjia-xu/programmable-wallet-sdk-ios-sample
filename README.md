@@ -13,7 +13,8 @@ This is a sample project for iOS beginners to integrate with CircleProgrammableW
 [Xcode](https://apps.apple.com/tw/app/xcode/id497799835?mt=12) consists of a suite of tools that developers use to build apps for Apple platforms. Use Xcode to manage your entire development workflow — from creating your app to testing, optimizing, and submitting it to the App Store.
 
 ### CocoaPods
-[CocoaPods](https://cocoapods.org/) is a dependency manager for Cocoa projects. For usage and installation instructions, visit their website.
+[CocoaPods](https://cocoapods.org/) is a dependency manager for Cocoa projects. For usage and installation instructions, visit their website.  
+(Alternatively install with Homebrew: [Link](https://formulae.brew.sh/formula/cocoapods))
 
 ### SSH key
 Shared [SSH key](https://share.1password.com/s#bzIRVj59HVFKzKj1LbZToCDh10DyPVlRKTmhFbVqmuo) for PW SDK Hackathon

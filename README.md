@@ -20,17 +20,18 @@ Shared [SSH key](https://share.1password.com/s#bzIRVj59HVFKzKj1LbZToCDh10DyPVlRK
 
 <img src="readme_images/screenshot_1.png" width="400"/>
 
+> How to setup an exist SSH key? : see [this](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent#adding-your-ssh-key-to-the-ssh-agent)
+
 1. `$ vi ~/.ssh/{your SSH key name}`, then paste the private key
-2. Open your `~/.ssh/config` file, then modify the file to contain the following lines.
+2. `$ chmod 400 ~/.ssh/{your SSH key name}`
+3. Open your `~/.ssh/config` file, then modify the file to contain the following lines.
     ```default
     Host bitbucket.com
       AddKeysToAgent yes
       UseKeychain yes
       IdentityFile ~/.ssh/{your SSH key name}
     ```
-3. `$ ssh-add --apple-use-keychain ~/.ssh/{your SSH key name}`
-
-> How to setup an exist SSH key? : see [this](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent#adding-your-ssh-key-to-the-ssh-agent)
+4. `$ ssh-add --apple-use-keychain ~/.ssh/{your SSH key name}`
 
 ## Installation
 

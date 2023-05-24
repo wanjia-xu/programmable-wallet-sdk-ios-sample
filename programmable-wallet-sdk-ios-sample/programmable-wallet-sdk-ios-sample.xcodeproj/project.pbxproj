@@ -10,9 +10,10 @@
 		B3BDF9D72A162860006E2D76 /* EndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3BDF9D62A162860006E2D76 /* EndPoint.swift */; };
 		B3BDF9D92A1631BC006E2D76 /* Toast.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3BDF9D82A1631BC006E2D76 /* Toast.swift */; };
 		B3BDF9DB2A1631EF006E2D76 /* Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3BDF9DA2A1631EF006E2D76 /* Utility.swift */; };
+		B3C10FA22A1CA32A00976C7B /* WalletSdkAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3C10FA12A1CA32A00976C7B /* WalletSdkAdapter.swift */; };
+		B3C10FA42A1CBE2100976C7B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B3C10FA32A1CBE2100976C7B /* Assets.xcassets */; };
 		B3E8DF632A15F63D0040371F /* programmable_wallet_sdk_ios_sampleApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3E8DF622A15F63D0040371F /* programmable_wallet_sdk_ios_sampleApp.swift */; };
 		B3E8DF652A15F63D0040371F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3E8DF642A15F63D0040371F /* ContentView.swift */; };
-		B3E8DF672A15F63F0040371F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B3E8DF662A15F63F0040371F /* Assets.xcassets */; };
 		B3E8DF6A2A15F63F0040371F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B3E8DF692A15F63F0040371F /* Preview Assets.xcassets */; };
 		E8EDA6AB69F3E3B79F7925D3 /* Pods_programmable_wallet_sdk_ios_sample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D07C469EBAE94E618DBBFCE9 /* Pods_programmable_wallet_sdk_ios_sample.framework */; };
 /* End PBXBuildFile section */
@@ -21,10 +22,11 @@
 		B3BDF9D62A162860006E2D76 /* EndPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndPoint.swift; sourceTree = "<group>"; };
 		B3BDF9D82A1631BC006E2D76 /* Toast.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Toast.swift; sourceTree = "<group>"; };
 		B3BDF9DA2A1631EF006E2D76 /* Utility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utility.swift; sourceTree = "<group>"; };
+		B3C10FA12A1CA32A00976C7B /* WalletSdkAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletSdkAdapter.swift; sourceTree = "<group>"; };
+		B3C10FA32A1CBE2100976C7B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B3E8DF5F2A15F63D0040371F /* programmable-wallet-sdk-ios-sample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "programmable-wallet-sdk-ios-sample.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B3E8DF622A15F63D0040371F /* programmable_wallet_sdk_ios_sampleApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = programmable_wallet_sdk_ios_sampleApp.swift; sourceTree = "<group>"; };
 		B3E8DF642A15F63D0040371F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		B3E8DF662A15F63F0040371F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B3E8DF692A15F63F0040371F /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		B439E52E3B22DC083AD67A6A /* Pods-programmable-wallet-sdk-ios-sample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-programmable-wallet-sdk-ios-sample.debug.xcconfig"; path = "Target Support Files/Pods-programmable-wallet-sdk-ios-sample/Pods-programmable-wallet-sdk-ios-sample.debug.xcconfig"; sourceTree = "<group>"; };
 		CDFEFF2A14EDA74EF8E4D786 /* Pods-programmable-wallet-sdk-ios-sample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-programmable-wallet-sdk-ios-sample.release.xcconfig"; path = "Target Support Files/Pods-programmable-wallet-sdk-ios-sample/Pods-programmable-wallet-sdk-ios-sample.release.xcconfig"; sourceTree = "<group>"; };
@@ -91,9 +93,10 @@
 		B3E8DF612A15F63D0040371F /* programmable-wallet-sdk-ios-sample */ = {
 			isa = PBXGroup;
 			children = (
-				B3E8DF662A15F63F0040371F /* Assets.xcassets */,
+				B3C10FA32A1CBE2100976C7B /* Assets.xcassets */,
 				B3E8DF622A15F63D0040371F /* programmable_wallet_sdk_ios_sampleApp.swift */,
 				B3E8DF642A15F63D0040371F /* ContentView.swift */,
+				B3C10FA12A1CA32A00976C7B /* WalletSdkAdapter.swift */,
 				B3BDF9DC2A16320E006E2D76 /* Helpers */,
 				B3E8DF682A15F63F0040371F /* Preview Content */,
 			);
@@ -169,8 +172,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B3C10FA42A1CBE2100976C7B /* Assets.xcassets in Resources */,
 				B3E8DF6A2A15F63F0040371F /* Preview Assets.xcassets in Resources */,
-				B3E8DF672A15F63F0040371F /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -241,6 +244,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B3BDF9DB2A1631EF006E2D76 /* Utility.swift in Sources */,
+				B3C10FA22A1CA32A00976C7B /* WalletSdkAdapter.swift in Sources */,
 				B3E8DF652A15F63D0040371F /* ContentView.swift in Sources */,
 				B3E8DF632A15F63D0040371F /* programmable_wallet_sdk_ios_sampleApp.swift in Sources */,
 				B3BDF9D92A1631BC006E2D76 /* Toast.swift in Sources */,

@@ -10,7 +10,7 @@ import CircleProgrammableWalletSDK
 
 struct ContentView: View {
 
-    let appId = "programmable-wallet-sdk-ios-sample" // temporary input a random string before production
+    let adapter = WalletSdkAdapter()
 
     @State var selectedEndPoint = EndPoint.sandbox
     @State var userToken = ""
@@ -35,12 +35,10 @@ struct ContentView: View {
         }
         .scrollContentBackground(.hidden)
         .onAppear {
-            let configuration = WalletSdk.Configuration(endPoint: selectedEndPoint.urlString, appId: appId)
-            WalletSdk.shared.setConfiguration(configuration)
+            self.adapter.initSDK(endPoint: selectedEndPoint.urlString)
         }
         .onChange(of: selectedEndPoint) { newValue in
-            let configuration = WalletSdk.Configuration(endPoint: newValue.urlString, appId: appId)
-            WalletSdk.shared.setConfiguration(configuration)
+            self.adapter.updateEndPoint(newValue.urlString)
         }
         .toast(message: toastMessage ?? "",
                isShowing: $showToast,
@@ -83,19 +81,7 @@ struct ContentView: View {
             guard !userToken.isEmpty else { showToast(.general, message: "User Token is Empty"); return }
             guard !secretKey.isEmpty else { showToast(.general, message: "Secret Key is Empty"); return }
             guard !challengeId.isEmpty else { showToast(.general, message: "Challenge ID is Empty"); return }
-
-            WalletSdk.shared.execute(userToken: userToken, secretKey: secretKey, challengeIds: [challengeId]) { arr, result in
-                switch result {
-                case .success(let result):
-                    let challengeStatus = result.status.rawValue
-                    let challeangeType = result.resultType.rawValue
-                    showToast(.success, message: "\(challeangeType) - \(challengeStatus)")
-
-                case .failure(let error):
-                    showToast(.failure, message: error.errorString)
-                }
-                return nil
-            }
+            executeChallenge(userToken: userToken, secretKey: secretKey, challengeId: challengeId)
 
         } label: {
             Text("Execute")
@@ -103,7 +89,6 @@ struct ContentView: View {
         }
         .buttonStyle(.borderedProminent)
     }
-    
 }
 
 extension ContentView {
@@ -125,6 +110,23 @@ extension ContentView {
             toastConfig = Toast.Config(backgroundColor: .green, duration: 2.0)
         case .failure:
             toastConfig = Toast.Config(backgroundColor: .pink, duration: 10.0)
+        }
+    }
+
+    func executeChallenge(userToken: String, secretKey: String, challengeId: String) {
+        WalletSdk.shared.execute(userToken: userToken,
+                                 secretKey: secretKey,
+                                 challengeIds: [challengeId]) { _, result in
+            switch result {
+            case .success(let result):
+                let challengeStatus = result.status.rawValue
+                let challeangeType = result.resultType.rawValue
+                showToast(.success, message: "\(challeangeType) - \(challengeStatus)")
+
+            case .failure(let error):
+                showToast(.failure, message: error.errorString)
+            }
+            return nil
         }
     }
 }

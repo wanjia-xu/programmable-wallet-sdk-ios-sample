@@ -10,12 +10,16 @@ This is a sample project for iOS beginners to integrate with CircleProgrammableW
 ## Requirements
 
 ### Xcode
-[Xcode](https://apps.apple.com/tw/app/xcode/id497799835?mt=12) consists of a suite of tools that developers use to build apps for Apple platforms. Use Xcode to manage your entire development workflow — from creating your app to testing, optimizing, and submitting it to the App Store.
+Install Apple’s Xcode development software: [Xcode in the Apple App Store](https://apps.apple.com/tw/app/xcode/id497799835?mt=12).
 
 ### CocoaPods
-[CocoaPods](https://cocoapods.org/) is a dependency manager for Cocoa projects. For usage and installation instructions, visit their website.  
-(Alternatively install with Homebrew: [Link](https://formulae.brew.sh/formula/cocoapods))
+**CocoaPods** is a dependency manager for iOS projects. [Install CocoaPods by Homebrew](https://formulae.brew.sh/formula/cocoapods). (suggested)
 
+> Check if Homebrew is installed:
+```shell
+$ brew
+```
+> How to install Homebrew in MacOS: [Link](https://mac.install.guide/homebrew/3.html)
 ### SSH key
 Shared [SSH key](https://share.1password.com/s#bzIRVj59HVFKzKj1LbZToCDh10DyPVlRKTmhFbVqmuo) for PW SDK Hackathon
 

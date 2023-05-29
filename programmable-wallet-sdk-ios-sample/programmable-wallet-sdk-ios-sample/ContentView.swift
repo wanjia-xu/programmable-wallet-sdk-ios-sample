@@ -116,8 +116,8 @@ extension ContentView {
     func executeChallenge(userToken: String, secretKey: String, challengeId: String) {
         WalletSdk.shared.execute(userToken: userToken,
                                  secretKey: secretKey,
-                                 challengeIds: [challengeId]) { _, result in
-            switch result {
+                                 challengeIds: [challengeId]) { response in
+            switch response.result {
             case .success(let result):
                 let challengeStatus = result.status.rawValue
                 let challeangeType = result.resultType.rawValue
@@ -126,7 +126,6 @@ extension ContentView {
             case .failure(let error):
                 showToast(.failure, message: error.errorString)
             }
-            return nil
         }
     }
 }

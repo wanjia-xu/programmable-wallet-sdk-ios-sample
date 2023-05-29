@@ -72,4 +72,8 @@ extension WalletSdkAdapter: WalletSdkDelegate {
     func walletSdk(willPresentController controller: UIViewController) {
         print("willPresentController: \(controller)")
     }
+
+    func walletSdk(controller: UIViewController, onForgetPINButtonSelected onSelect: Void) {
+        print("onForgetPINButtonSelected")
+    }
 }

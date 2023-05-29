@@ -124,7 +124,7 @@ extension ContentView {
                 showToast(.success, message: "\(challeangeType) - \(challengeStatus)")
 
             case .failure(let error):
-                showToast(.failure, message: error.errorString)
+                showToast(.failure, message: "Error: " + error.errorString)
             }
         }
     }

@@ -122,7 +122,6 @@
 				B3E8DF5B2A15F63D0040371F /* Sources */,
 				B3E8DF5C2A15F63D0040371F /* Frameworks */,
 				B3E8DF5D2A15F63D0040371F /* Resources */,
-				8BC12D7875675D225DA22D8F /* [CP] Embed Pods Frameworks */,
 				BC96A7145638BC3DCAC1381D /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
@@ -180,23 +179,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		8BC12D7875675D225DA22D8F /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-programmable-wallet-sdk-ios-sample/Pods-programmable-wallet-sdk-ios-sample-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-programmable-wallet-sdk-ios-sample/Pods-programmable-wallet-sdk-ios-sample-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-programmable-wallet-sdk-ios-sample/Pods-programmable-wallet-sdk-ios-sample-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		BC96A7145638BC3DCAC1381D /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;

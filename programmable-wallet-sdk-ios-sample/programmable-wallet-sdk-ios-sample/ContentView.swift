@@ -30,6 +30,7 @@ struct ContentView: View {
                 sectionInputField("Secret Key", binding: $secretKey)
                 sectionInputField("Challenge ID", binding: $challengeId)
                 sectionExecuteButton
+                TestButtons
             }
             versionText
         }
@@ -127,6 +128,32 @@ extension ContentView {
                 showToast(.failure, message: "Error: " + error.errorString)
             }
         }
+    }
+
+    var TestButtons: some View {
+        Group {
+            Spacer().frame(height: 20)
+            Button("New PIN", action: newPIN)
+            Button("Change PIN", action: changePIN)
+            Button("Restore PIN", action: restorePIN)
+            Button("Enter PIN", action: enterPIN)
+        }
+    }
+
+    func newPIN() {
+        WalletSdk.shared.execute(userToken: "", secretKey: "", challengeIds: ["new_pin"])
+    }
+
+    func enterPIN() {
+        WalletSdk.shared.execute(userToken: "", secretKey: "", challengeIds: ["enter_pin"])
+    }
+
+    func changePIN() {
+        WalletSdk.shared.execute(userToken: "", secretKey: "", challengeIds: ["change_pin"])
+    }
+
+    func restorePIN() {
+        WalletSdk.shared.execute(userToken: "", secretKey: "", challengeIds: ["restore_pin"])
     }
 }
 

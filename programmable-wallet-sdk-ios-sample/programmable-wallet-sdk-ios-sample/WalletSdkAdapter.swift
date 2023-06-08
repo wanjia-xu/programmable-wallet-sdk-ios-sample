@@ -10,7 +10,7 @@ import CircleProgrammableWalletSDK
 
 class WalletSdkAdapter {
 
-    let appId = "programmable-wallet-sdk-ios-sample" // temporary input a random string before production
+    let appId = "programmable-wallet-sdk-ios-sample" // put your App ID here
 
     func initSDK(endPoint: String) {
         self.updateEndPoint(endPoint)

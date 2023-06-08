@@ -25,8 +25,6 @@ Shared [SSH key](https://share.1password.com/s#bzIRVj59HVFKzKj1LbZToCDh10DyPVlRK
 
 <img src="readme_images/screenshot_1.png" width="400"/>
 
-> How to setup an exist SSH key? : see [this](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent#adding-your-ssh-key-to-the-ssh-agent)
-
 1. `$ vi ~/.ssh/{your SSH key name}`, then paste the private key
 2. `$ chmod 400 ~/.ssh/{your SSH key name}`
 3. Open your `~/.ssh/config` file, then modify the file to contain the following lines.
@@ -37,6 +35,9 @@ Shared [SSH key](https://share.1password.com/s#bzIRVj59HVFKzKj1LbZToCDh10DyPVlRK
       IdentityFile ~/.ssh/{your SSH key name}
     ```
 4. `$ ssh-add --apple-use-keychain ~/.ssh/{your SSH key name}`
+5. `$ ssh -T git@github.com` to try the connection
+
+> How to setup an exist SSH key? : see [this](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent#adding-your-ssh-key-to-the-ssh-agent)
 
 ## Installation
 

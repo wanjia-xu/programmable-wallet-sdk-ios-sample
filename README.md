@@ -50,6 +50,9 @@ Shared [SSH key](https://share.1password.com/s#bzIRVj59HVFKzKj1LbZToCDh10DyPVlRK
 
 ## Run the project
 
-1. Select a simulator as run target
-2. press `Run` button (Command + R)
+1. Put your `APP ID` in the `WalletSdkAdapter`
+![image](readme_images/screenshot_4.png)
+
+2. Select a simulator as run target
+3. press `Run` button (Command + R)
 ![image](readme_images/screenshot_3.png)

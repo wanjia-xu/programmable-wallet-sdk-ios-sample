@@ -5,7 +5,7 @@ target 'programmable-wallet-sdk-ios-sample' do
   # Comment the next line if you don't want to use dynamic frameworks
   use_frameworks! :linkage => :static
   
-  pod 'CircleProgrammableWalletSDK_Internal', '1.0.15'
+  pod 'CircleProgrammableWalletSDK_Internal'
 
 end
 

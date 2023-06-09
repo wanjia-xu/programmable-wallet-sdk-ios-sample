@@ -14,10 +14,8 @@ class WalletSdkAdapter {
 
     func initSDK(endPoint: String) {
         self.updateEndPoint(endPoint)
-        self.setImages()
-        self.setSecurityIntros()
-        self.setSecurityQuestions()
 
+        WalletSdk.shared.setLayoutProvider(self)
         WalletSdk.shared.setDelegate(self)
     }
 
@@ -25,8 +23,36 @@ class WalletSdkAdapter {
         let configuration = WalletSdk.Configuration(endPoint: endPoint, appId: appId)
         WalletSdk.shared.setConfiguration(configuration)
     }
+}
 
-    func setImages() {
+extension WalletSdkAdapter: WalletSdkLayoutProvider {
+
+    func securityQuestions() -> [SecurityQuestion] {
+        return [
+            SecurityQuestion(title: "What is your childhood nickname?", inputType: .text),
+            SecurityQuestion(title: "What is the middle name of your oldest child?", inputType: .text),
+            SecurityQuestion(title: "What is your favorite team?", inputType: .text),
+            SecurityQuestion(title: "When was your birthday?", inputType: .datePicker),
+            SecurityQuestion(title: "When is your marriage anniversary?", inputType: .datePicker),
+        ]
+    }
+
+    func securityQuestionsRequiredCount() -> Int {
+        return 3
+    }
+
+    func securityConfirmItems() -> [SecurityConfirmItem] {
+        return [
+            SecurityConfirmItem(image: UIImage(named: "img_info"),
+                                text: "This is the only way to recover my account access."),
+            SecurityConfirmItem(image: UIImage(named: "img_claim_success"),
+                                text: "Circle won’t store my answers so it’s my responsibility to remember them."),
+            SecurityConfirmItem(image: UIImage(named: "img_claim_success"),
+                                text: "I will lose access to my wallet and my digital assets if I forget my answers."),
+        ]
+    }
+
+    func imageStore() -> ImageStore {
         let local: [ImageStore.Img: UIImage] = [
             .naviBack: UIImage(named: "ic_navi_back")!,
             .naviClose: UIImage(named: "ic_navi_close")!,
@@ -38,34 +64,15 @@ class WalletSdkAdapter {
         ]
 
         let remote: [ImageStore.Img : URL] = [:]
-        let images = ImageStore(local: local, remote: remote)
 
-        WalletSdk.shared.setImages(images)
+        return ImageStore(local: local, remote: remote)
     }
 
-    func setSecurityIntros() {
-        let intros: [SecurityIntro] = [
-            .init(image: UIImage(named: "img_info"),
-                  text: "This is the only way to recover my account access."),
-            .init(image: UIImage(named: "img_claim_success"),
-                  text: "Circle won’t store my answers so it’s my responsibility to remember them."),
-            .init(image: UIImage(named: "img_claim_success"),
-                  text: "I will lose access to my wallet and my digital assets if I forget my answers."),
-        ]
-        WalletSdk.shared.setSecurityIntros(intros)
-    }
-
-    func setSecurityQuestions() {
-        let questions: [SecurityQuestion] = [
-            .init(title: "What is your childhood nickname?", inputType: .text),
-            .init(title: "What is the middle name of your oldest child?", inputType: .text),
-            .init(title: "What is your favorite team?", inputType: .text),
-            .init(title: "When was your birthday?", inputType: .datePicker),
-            .init(title: "When is your marriage anniversary?", inputType: .datePicker),
-        ]
-        WalletSdk.shared.setSecurityQuestions(questions)
+    func displayDateFormat() -> String {
+        return "yyyy/MM/dd"
     }
 }
+
 
 extension WalletSdkAdapter: WalletSdkDelegate {
 

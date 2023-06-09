@@ -35,7 +35,7 @@ Shared [SSH key](https://share.1password.com/s#bzIRVj59HVFKzKj1LbZToCDh10DyPVlRK
       IdentityFile ~/.ssh/{your SSH key name}
     ```
 4. `$ ssh-add --apple-use-keychain ~/.ssh/{your SSH key name}`
-5. `$ ssh -T git@github.com` to try the connection
+5. `$ ssh -T git@bitbucket.org` to try the connection
 
 > How to setup an exist SSH key? : see [this](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent#adding-your-ssh-key-to-the-ssh-agent)
 

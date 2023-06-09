@@ -30,6 +30,8 @@ struct ContentView: View {
                 sectionInputField("Secret Key", binding: $secretKey)
                 sectionInputField("Challenge ID", binding: $challengeId)
                 sectionExecuteButton
+
+                Spacer()
                 TestButtons
             }
             versionText
@@ -131,29 +133,33 @@ extension ContentView {
     }
 
     var TestButtons: some View {
-        Group {
-            Spacer().frame(height: 20)
+        Section {
             Button("New PIN", action: newPIN)
             Button("Change PIN", action: changePIN)
             Button("Restore PIN", action: restorePIN)
             Button("Enter PIN", action: enterPIN)
+
+        } header: {
+            Text("UI Customization Entry")
+                .font(.title3)
+                .fontWeight(.semibold)
         }
     }
 
     func newPIN() {
-        WalletSdk.shared.execute(userToken: "", secretKey: "", challengeIds: ["new_pin"])
+        WalletSdk.shared.execute(userToken: "", secretKey: "", challengeIds: ["ui_new_pin"])
     }
 
     func enterPIN() {
-        WalletSdk.shared.execute(userToken: "", secretKey: "", challengeIds: ["enter_pin"])
+        WalletSdk.shared.execute(userToken: "", secretKey: "", challengeIds: ["ui_enter_pin"])
     }
 
     func changePIN() {
-        WalletSdk.shared.execute(userToken: "", secretKey: "", challengeIds: ["change_pin"])
+        WalletSdk.shared.execute(userToken: "", secretKey: "", challengeIds: ["ui_change_pin"])
     }
 
     func restorePIN() {
-        WalletSdk.shared.execute(userToken: "", secretKey: "", challengeIds: ["restore_pin"])
+        WalletSdk.shared.execute(userToken: "", secretKey: "", challengeIds: ["ui_restore_pin"])
     }
 }
 
